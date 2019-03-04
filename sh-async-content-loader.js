@@ -170,13 +170,15 @@ class AsyncContentLoader {
       case "sliderCustom":
         asyncSection = self.parseSliderCustom(results);
         document.getElementById('contentLoader').appendChild(asyncSection);
-        self.runSurfSlider();
+        // You would need: https://github.com/franciscosurf/surf-carousel-js
+        //self.runSurfSlider();
         break;
 
       case "slider":
         asyncSection = self.parseSlider(results);
         document.getElementById('contentLoader').appendChild(asyncSection);
-        self.runSurfSlider();
+        // You would need: https://github.com/franciscosurf/surf-carousel-js
+        //self.runSurfSlider();
         // Run photoSlider to fade in the first carousel images (index.blade.php)
         self.photoSlider();
         break;
@@ -196,9 +198,10 @@ class AsyncContentLoader {
     }
 
     // Exported default Intersection Observer bg images
-    if (typeof myAppIO.observe === "function") {
-      myAppIO.observe();
-    }
+    // You would need: https://github.com/franciscosurf/intersection-observer-vanilla-js
+    //if (typeof myAppIO.observe === "function") {
+    //  myAppIO.observe();
+    //}
 
     // All elements with waitContentLoader will be visible now
     //if(self.state.requestCount === 2) {
@@ -391,6 +394,7 @@ class AsyncContentLoader {
 
   /**
    * Runs a new instance of the Surf Carousel
+   * Note: You would need https://github.com/franciscosurf/surf-carousel-js
    */
   runSurfSlider() {
 
@@ -488,6 +492,7 @@ class AsyncContentLoader {
     this.stylesMarkup();
 
     // Run the first slider for "Best Selling SC Packages"
+    // You would need: https://github.com/franciscosurf/surf-carousel-js
     //this.runSurfSlider();
 
     // Loop the async routes
